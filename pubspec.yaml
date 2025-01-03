@@ -1,7 +1,7 @@
 name: notifyx
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/ozcantolgahan/notifyx
 
 environment:
   sdk: '>=3.4.4 <4.0.0'
