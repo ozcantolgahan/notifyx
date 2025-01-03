@@ -1,5 +1,5 @@
 name: notifyx
-description: "A new Flutter package project."
+description: "NotifyX is a Flutter package for displaying error states and notifications with a modern UI, featuring customizable buttons, titles, and icons to enhance user experience."
 version: 1.0.0
 homepage: https://github.com/ozcantolgahan/notifyx
 
