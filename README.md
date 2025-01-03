@@ -56,7 +56,7 @@ onTap: () {
 
 NotifyX not only allows you to display animated alerts but also enables you to use alerts as a static widget. This makes it easy to show an alert in a fixed position on a screen or a page. Below is an example of how to use NotifyX as a static widget:
 
-https://github.com/user-attachments/assets/8bd2fcf9-07ca-470c-845c-42aec39dfe5f
+<img src='https://github.com/user-attachments/assets/77a00c2f-cd02-45f7-a67b-3b0c55be6abc' width='400'>
 
 ``` <Widget>[
               RichNotifyXWidget(
@@ -126,7 +126,7 @@ https://github.com/user-attachments/assets/8bd2fcf9-07ca-470c-845c-42aec39dfe5f
 
 With NotifyX, you can make your alerts more interactive by adding customizable link buttons. The example below demonstrates how to include a link button inside an alert:
 
-https://github.com/user-attachments/assets/6befc72a-edde-45d6-b6a5-3bc2e6a710fd
+<img src='https://github.com/user-attachments/assets/271c80da-306e-4e0a-a9ad-92d2e9ab13d3' width='400'>
 
 ```
  <Widget>[
@@ -176,7 +176,8 @@ The NotifyX widget offers a variety of properties to help you fully customize yo
 
 #### Some screenshots
 
-https://github.com/user-attachments/assets/68c5ca00-284a-4edf-9499-72265799d3d9
+<img src='https://github.com/user-attachments/assets/97011925-99c6-46bc-9578-799e7a730134' width='400'>
+
 
 ## Release History
 
