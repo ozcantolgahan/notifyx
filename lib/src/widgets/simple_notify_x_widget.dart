@@ -1,3 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:notifyx/src/constants/constants.dart';
+import 'package:notifyx/src/enums/enums.dart';
+import 'package:notifyx/src/models/models.dart';
+import 'package:notifyx/src/styles/styles.dart';
+
 /// A simple and customizable notification widget to display alert messages.
 ///
 /// This widget is designed to display a notification with a title, optional link button,
@@ -14,13 +21,6 @@
 /// - `suffixIcon`: An optional widget (e.g., cancel icon) displayed on the right side of the notification.
 /// - `hasCancelIcon`: Determines whether a cancel icon should be displayed (default is `true`).
 /// - `cancelOnTap`: Callback function triggered when the cancel icon is tapped.
-
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:notifyx/src/constants/constants.dart';
-import 'package:notifyx/src/enums/enums.dart';
-import 'package:notifyx/src/models/models.dart';
-import 'package:notifyx/src/styles/styles.dart';
 
 class SimpleNotifyX extends StatelessWidget {
   const SimpleNotifyX(
@@ -98,10 +98,12 @@ class SimpleNotifyX extends StatelessWidget {
                           onTap: cancelOnTap,
                           child: SvgPicture.asset(
                             AppAssets.times,
-                            color:
+                            colorFilter:
                                 (type.key ?? '').toLowerCase().contains('solid')
                                     ? null
-                                    : ColorConstants.textPrimary,
+                                    : ColorFilter.mode(
+                                        ColorConstants.textPrimary,
+                                        BlendMode.srcIn),
                           ))
                       : const SizedBox())
             ],

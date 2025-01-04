@@ -1,3 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:notifyx/src/constants/constants.dart';
+import 'package:notifyx/src/enums/enums.dart';
+import 'package:notifyx/src/models/models.dart';
+import 'package:notifyx/src/styles/styles.dart';
+
 /// A customizable widget to display rich notifications with various types of alerts.
 ///
 /// This widget allows you to display different types of alerts (e.g., solid or outlined) with various components such as:
@@ -19,13 +26,6 @@
 /// - `hasCancelIcon`: Determines whether to show a cancel icon (default is `true`).
 /// - `cancelOnTap`: Callback function triggered when the cancel icon is tapped.
 /// - `linkButton`: An optional `LinkButtonModel` for adding a clickable button within the alert.
-
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:notifyx/src/constants/constants.dart';
-import 'package:notifyx/src/enums/enums.dart';
-import 'package:notifyx/src/models/models.dart';
-import 'package:notifyx/src/styles/styles.dart';
 
 class RichNotifyXWidget extends StatelessWidget {
   const RichNotifyXWidget(
@@ -140,12 +140,13 @@ class RichNotifyXWidget extends StatelessWidget {
               (hasCancelIcon
                   ? InkWell(
                       onTap: cancelOnTap,
-                      child: SvgPicture.asset(
-                        AppAssets.times,
-                        color: (type.key ?? '').toLowerCase().contains('solid')
-                            ? null
-                            : ColorConstants.textPrimary,
-                      ))
+                      child: SvgPicture.asset(AppAssets.times,
+                          colorFilter: (type.key ?? '')
+                                  .toLowerCase()
+                                  .contains('solid')
+                              ? null
+                              : ColorFilter.mode(
+                                  ColorConstants.textPrimary, BlendMode.srcIn)))
                   : const SizedBox()),
         )
       ],

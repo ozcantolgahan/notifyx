@@ -55,10 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RichNotifyXWidget(
-                type: AlertEnumTypes.infoSolid,
+                type: AlertEnumTypes.infoOutlined,
                 title: 'Lorem Ipsum',
                 description:
                     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
@@ -80,28 +80,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: 'Lorem Ipsum',
                 description:
                     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
-              ),
-              const SizedBox(
-                height: 12,
-              ),
-              SimpleNotifyX(
-                  type: AlertEnumTypes.errorSolid,
-                  title: 'Lorem Ipsum is simply'),
-              const SizedBox(
-                height: 12,
-              ),
-              RichNotifyXWidget(
-                type: AlertEnumTypes.primarySolid,
-                title: 'Lorem Ipsum',
-                description:
-                    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
                 hasCancelIcon: false,
               ),
               const SizedBox(
                 height: 12,
               ),
               RichNotifyXWidget(
-                type: AlertEnumTypes.infoSoft,
+                type: AlertEnumTypes.errorOutlined,
                 title: 'Lorem Ipsum',
                 description:
                     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',

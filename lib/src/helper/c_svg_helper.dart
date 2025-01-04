@@ -6,7 +6,8 @@ class CSvgHelper {
     return SvgPicture.asset(
       assetName,
       fit: BoxFit.contain,
-      color: color,
+      colorFilter:
+          color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null,
     );
   }
 }

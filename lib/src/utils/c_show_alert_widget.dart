@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 /// A function to show an animated alert overlay in the current context.
 ///
 /// This function adds an animated alert widget to the screen using the overlay.
@@ -15,9 +17,6 @@
 ///
 /// The function ensures only one alert is shown at a time by using a static flag (`_isAlertVisible`).
 /// Once the alert is dismissed, the flag is reset, allowing a new alert to be shown.
-
-import 'package:flutter/material.dart';
-
 void showAnimatedAlert(
     {required BuildContext context,
     required Widget alertWidget,
@@ -26,12 +25,13 @@ void showAnimatedAlert(
     double? topPadding,
     double? leftPadding,
     double? rightPadding}) {
-  final overlay = Overlay.of(context);
-  if (overlay == null) return; // Return early if overlay is not available.
+  final overlay =
+      Overlay.of(context); // Return early if overlay is not available.
 
   // Static variable to track if the alert is currently visible.
-  if (_isAlertVisible)
+  if (_isAlertVisible) {
     return; // Prevent showing a new alert if one is already visible.
+  }
 
   late OverlayEntry overlayEntry;
 
@@ -67,18 +67,17 @@ class AnimatedAlertWidget extends StatefulWidget {
   final double? rightPadding;
 
   const AnimatedAlertWidget(
-      {Key? key,
+      {super.key,
       required this.alertWidget,
       required this.duration,
       required this.animationDuration,
       required this.onDismissed,
       this.topPadding,
       this.leftPadding,
-      this.rightPadding})
-      : super(key: key);
+      this.rightPadding});
 
   @override
-  _AnimatedAlertWidgetState createState() => _AnimatedAlertWidgetState();
+  State<AnimatedAlertWidget> createState() => _AnimatedAlertWidgetState();
 }
 
 class _AnimatedAlertWidgetState extends State<AnimatedAlertWidget>
