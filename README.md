@@ -18,8 +18,7 @@ Then, run the following command in the terminal to install the package:
 
 The video demonstrates the usage of the NotifyX package and showcases different alert types (success, error, info, warning, etc.) step by step. NotifyX allows you to create modern and customizable alerts to enhance the user experience in your Flutter projects.
 
-
-https://github.com/user-attachments/assets/f35add10-d17b-45c3-be06-b1f3c1894c74
+<img src='https://github.com/user-attachments/assets/921a9b07-82c9-491d-b2e4-4dcf5a2d4df4' width='400'>
 
 ```
 onTap: () {
